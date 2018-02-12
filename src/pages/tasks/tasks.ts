@@ -35,7 +35,8 @@ export class TasksPage {
 
   refreshData(refresher) {
     this.refresher = refresher;
-    this.refreshTasks()
+    // this.refreshTasks()
+    this.mockItemsForTable();
   }
 
   refreshTasks() {
@@ -98,6 +99,12 @@ export class TasksPage {
       .then(client => client.delete(params).promise())
       .then(data => this.items.splice(index, 1))
       .catch((err) => logger.debug('delete task error', err));
+  }
+
+
+
+  mockItemsForTable(){
+    console.log(this.taskTable);
   }
 
 }
