@@ -1,0 +1,8 @@
+<button ion-item>
+  <h2>{{item.category}}</h2>
+  <p>{{item.description}}</p>
+</button>
+
+<ion-item-options>
+  <button ion-button color="danger" (click)="deleteTask(item, idx)">DELETE</button>
+</ion-item-options>
